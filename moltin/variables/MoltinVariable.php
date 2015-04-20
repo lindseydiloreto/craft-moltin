@@ -4,6 +4,26 @@ namespace Craft;
 class MoltinVariable
 {
 
+	private $_jsIncluded = false;
+
+	public function js($outputHere = false)
+	{
+		if (!$this->_jsIncluded) {
+			$this->_jsIncluded = true;
+			$api = 'https://js.moltin.com/v1';
+			$settings = craft()->plugins->getPlugin('moltin')->getSettings();
+			$authenticate = 'var moltin = new Moltin({publicId: "'.$settings->clientId.'"});';
+			if ($outputHere) {
+				return TemplateHelper::getRaw('
+<script type="text/javascript" src="'.$api.'"></script>
+<script type="text/javascript">'.$authenticate.'</script>');
+			} else {
+				craft()->templates->includeJsFile($api);
+				craft()->templates->includeJs($authenticate);
+			}
+		}
+	}
+
 	public function test()
 	{
 
