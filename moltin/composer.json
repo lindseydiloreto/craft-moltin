@@ -1,0 +1,14 @@
+{
+    "name": "lindseydiloreto/moltin",
+    "description": "Moltin Cart",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Double Secret Agency",
+            "email": "support@doublesecretagency.com"
+        }
+    ],
+    "require": {
+        "moltin/php-sdk": "dev-version1"
+    }
+}

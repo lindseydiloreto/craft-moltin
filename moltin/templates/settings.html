@@ -1,0 +1,36 @@
+{% import '_includes/forms' as forms %}
+{% includeCssResource 'moltin/css/settings.css' %}
+
+<h2>Moltin API Credentials</h2>
+
+<p>Enter your API credentials here:</p>
+
+<div class="moltin-field-container">
+
+	{{ forms.textField({
+		label: "Moltin Client ID"|t,
+		id: 'clientId',
+		name: 'clientId',
+		value: settings.clientId,
+		errors: settings.getErrors('clientId')
+	}) }}
+
+	{{ forms.textField({
+		label: "Moltin Client Secret"|t,
+		id: 'clientSecret',
+		name: 'clientSecret',
+		value: settings.clientSecret,
+		errors: settings.getErrors('clientSecret')
+	}) }}
+
+</div>
+
+{#
+<hr />
+
+{% set supportEmail = '<a href="mailto:support@doublesecretagency.com?subject=Moltin%20Feedback">support@doublesecretagency.com</a>' %}
+
+<h2>Documentation &amp; Feedback</h2>
+<p>All documentation can be found at <a href="https://craftpl.us/plugins/moltin/docs/" target="_blank">Craft Plus</a>.</p>
+<p>You can reach us at {{ supportEmail | raw }}. All questions, comments, and suggestions are welcome!</p>
+#}
