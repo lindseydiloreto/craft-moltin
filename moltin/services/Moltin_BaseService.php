@@ -29,16 +29,29 @@ class Moltin_BaseService extends BaseApplicationComponent
 
 	protected function _handleResponse($response, $expectsArray = false)
 	{
-		if ($response['status']) {
-			return $response['result'];
+
+		if (array_key_exists('result', $response)) {
+
+			if ($response['status']) {
+				return $response['result'];
+			} else {
+
+				// TEMP
+				Craft::dd($response['error']);
+				// How to properly handle errors?
+
+				return null;
+			}
+
 		} else {
-
-			// TEMP
-			Craft::dd($response['error']);
-			// How to properly handle errors?
-
-			return null;
+			if ($response['status']) {
+				$output = $response['message'];
+			} else {
+				$output = $response['error'];
+			}
+			return $output;
 		}
+
 	}
 
 }

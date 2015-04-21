@@ -29,8 +29,8 @@ class MoltinPlugin extends BasePlugin
 
 	public function getDeveloperUrl()
 	{
-		//return 'https://craftpl.us/plugins/moltin';
-		return 'http://doublesecretagency.com';
+		return 'https://github.com/lindseydiloreto/craft-moltin';
+		// return 'http://doublesecretagency.com';
 	}
 
 	public function getSettingsHtml()
