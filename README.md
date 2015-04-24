@@ -70,6 +70,11 @@ Simply add your authentication info when you first install the plugin!
 
 ## Change Log
 
+### v0.8.1
+ - Added JS API support
+ - Added remaining services
+ - Updated PHP SDK
+
 ### v0.8.0
  - Initial beta release
 
