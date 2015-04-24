@@ -27,10 +27,15 @@ class MoltinVariable
 	public function test()
 	{
 
-		$matches = craft()->moltin_products->find(['slug' => 'test-product']);
+		$matches = craft()->moltin_products->find(['slug' => 'peers-conference']);
 		$product = $matches[0];
 
-		craft()->moltin_cart->insert($product['id']);
+		craft()->moltin_cart->insert($product['id'], 1);
+
+
+		return craft()->moltin_cart->contents();
+
+		die();
 
 		$order = craft()->moltin_cart->order([
 			'gateway' => 'stripe',
