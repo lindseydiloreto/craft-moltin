@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/moltin/php-sdk.git",
-                "reference": "f21d9f817495b499ce0e6243328dc52cf2e43b3f"
+                "reference": "e6944fa445274165f3a4fefb18ffd61cda883aad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moltin/php-sdk/zipball/f21d9f817495b499ce0e6243328dc52cf2e43b3f",
-                "reference": "f21d9f817495b499ce0e6243328dc52cf2e43b3f",
+                "url": "https://api.github.com/repos/moltin/php-sdk/zipball/e6944fa445274165f3a4fefb18ffd61cda883aad",
+                "reference": "e6944fa445274165f3a4fefb18ffd61cda883aad",
                 "shasum": ""
             },
             "require": {
@@ -43,7 +43,7 @@
                 }
             ],
             "description": "The Moltin php-sdk is a simple to use interface for the API to help you get off the ground quickly and efficiently",
-            "time": "2015-04-22 00:46:27"
+            "time": "2015-04-23 17:54:15"
         }
     ],
     "packages-dev": [],
