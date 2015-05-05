@@ -27,7 +27,9 @@ class MoltinVariable
 	public function test()
 	{
 
-		$matches = craft()->moltin_products->find(['slug' => 'peers-conference']);
+		/*
+		
+		$matches = craft()->moltin_products->find(['slug' => 'threading-the-needle']);
 		$product = $matches[0];
 
 		craft()->moltin_cart->insert($product['id'], 1);
@@ -95,6 +97,8 @@ class MoltinVariable
 		// Dummy data
 		//return $cart['contents']['91042be0d1493fb219dc346d4443eb01']['description'];
 		return $cart['currency'];
+
+		*/
 
 	}
 
