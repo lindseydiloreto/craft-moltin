@@ -9,6 +9,6 @@
         }
     ],
     "require": {
-        "moltin/php-sdk": "dev-version1"
+        "moltin/php-sdk": "dev-beta"
     }
 }
