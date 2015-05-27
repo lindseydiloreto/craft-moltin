@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "hash": "e7c04a7b76f2f119f8567130de21bdc2",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/moltin/php-sdk.git",
-                "reference": "00c4b407c7a64ca77e95d4afffd5a903a4344820"
+                "reference": "d37884d0ca5a1e285dc3cdc50b09427e40cd73a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moltin/php-sdk/zipball/00c4b407c7a64ca77e95d4afffd5a903a4344820",
-                "reference": "00c4b407c7a64ca77e95d4afffd5a903a4344820",
+                "url": "https://api.github.com/repos/moltin/php-sdk/zipball/d37884d0ca5a1e285dc3cdc50b09427e40cd73a3",
+                "reference": "d37884d0ca5a1e285dc3cdc50b09427e40cd73a3",
                 "shasum": ""
             },
             "require": {
@@ -43,7 +43,7 @@
                 }
             ],
             "description": "The Moltin php-sdk is a simple to use interface for the API to help you get off the ground quickly and efficiently",
-            "time": "2015-05-05 23:26:56"
+            "time": "2015-05-20 12:09:56"
         }
     ],
     "packages-dev": [],
