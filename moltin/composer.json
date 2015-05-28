@@ -10,5 +10,8 @@
     ],
     "require": {
         "moltin/php-sdk": "dev-version1"
+    },
+    "config": {
+        "preferred-install": "dist"
     }
 }

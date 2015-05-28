@@ -70,6 +70,9 @@ Simply add your authentication info when you first install the plugin!
 
 ## Change Log
 
+### v0.8.4
+ - Switched to `dist` SDK
+
 ### v0.8.1
  - Added JS API support
  - Added remaining services

@@ -19,7 +19,7 @@ class MoltinPlugin extends BasePlugin
 
 	public function getVersion()
 	{
-		return '0.8.3';
+		return '0.8.4';
 	}
 
 	public function getDeveloper()
