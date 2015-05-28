@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e7c04a7b76f2f119f8567130de21bdc2",
+    "hash": "a6c204fe9971696d8ea4c6de5aab9813",
     "packages": [
         {
             "name": "moltin/php-sdk",
