@@ -65,17 +65,7 @@ class MoltinPlugin extends BasePlugin
 		}
 		catch (\Exception $e)
 		{
-			if (craft()->request->isCpRequest()) {
-				$message = 'Moltin - '.$e->getMessage();
-				Craft::log($message, LogLevel::Warning);
-				craft()->userSession->setError($message);
-			} else {
-
-				// TEMP
-				throw $e;
-				// How to properly handle errors?
-
-			}
+			craft()->moltin->handleError($e);
 		}
 	}
 

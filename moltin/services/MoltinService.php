@@ -16,4 +16,20 @@ class MoltinService extends BaseApplicationComponent
 		// $this->currencies = craft()->moltin_currencies;
 	}
 
+	public function handleError($e)
+	{
+		$message = $e->getMessage();
+		MoltinPlugin::log($message, LogLevel::Error);
+		
+		if (craft()->request->isCpRequest()) {
+			craft()->userSession->setError("Moltin error: $message");
+		} else {
+
+			// TEMP
+			throw $e;
+			// How to properly handle errors?
+
+		}
+	}
+
 }
