@@ -6,12 +6,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/moltin/php-sdk.git",
-            "reference": "d37884d0ca5a1e285dc3cdc50b09427e40cd73a3"
+            "reference": "43a5aac1014d10331d76e7e6b7acfb944a679902"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/moltin/php-sdk/zipball/d37884d0ca5a1e285dc3cdc50b09427e40cd73a3",
-            "reference": "d37884d0ca5a1e285dc3cdc50b09427e40cd73a3",
+            "url": "https://api.github.com/repos/moltin/php-sdk/zipball/43a5aac1014d10331d76e7e6b7acfb944a679902",
+            "reference": "43a5aac1014d10331d76e7e6b7acfb944a679902",
             "shasum": ""
         },
         "require": {
@@ -21,7 +21,7 @@
             "mockery/mockery": "0.7.*",
             "phpunit/phpunit": "3.7.*"
         },
-        "time": "2015-05-20 12:09:56",
+        "time": "2015-05-30 22:36:44",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
