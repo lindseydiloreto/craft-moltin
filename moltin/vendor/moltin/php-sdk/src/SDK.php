@@ -128,13 +128,21 @@ class SDK
         return $flows->build($fields);
     }
 
-    public function identifier()
+    public function identifier($reset = false, $identifier = null)
     {
+        if ($reset) {
+            setcookie('mcart', null, -1, '/');
+            unset($_COOKIE['mcart']);
+        }
+
         if (isset($_COOKIE['mcart'])) {
             return $_COOKIE['mcart'];
         }
 
-        $identifier = md5(uniqid());
+        if(! $identifier) {
+            $identifier = md5(uniqid());
+        }
+
         setcookie('mcart', $identifier, strtotime("+30 day"), '/');
 
         return $identifier;
@@ -193,6 +201,9 @@ class SDK
         if ($method == 'GET' and ! empty($data)) {
             $url .= '?' . http_build_query($data);
             $data = array();
+        } else if ($method == 'PUT') {
+            $url .= (strpos($url, '?') !== false ? '&' : '?').'_method='.$method;
+            $method = 'POST';
         }
 
         // Start request

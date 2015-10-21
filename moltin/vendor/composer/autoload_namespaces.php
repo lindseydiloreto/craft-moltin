@@ -6,5 +6,4 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Moltin' => array($vendorDir . '/moltin/php-sdk/src'),
 );

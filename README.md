@@ -70,6 +70,9 @@ Simply add your authentication info when you first install the plugin!
 
 ## Change Log
 
+### v0.8.5
+ - Updated PHP SDK
+
 ### v0.8.4
  - Switched to `dist` SDK
 

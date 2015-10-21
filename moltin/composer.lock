@@ -4,33 +4,33 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6de7a42883ce1d4e248c5f3e3e2652e7",
+    "hash": "de4790d6a5d25e6e642e5eace0cfef8c",
+    "content-hash": "b7a6763320381f152ba71ea598edb034",
     "packages": [
         {
             "name": "moltin/php-sdk",
-            "version": "dev-version1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moltin/php-sdk.git",
-                "reference": "43a5aac1014d10331d76e7e6b7acfb944a679902"
+                "reference": "3576d4afa7fca3b6672e793e40b9e3672010d167"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moltin/php-sdk/zipball/43a5aac1014d10331d76e7e6b7acfb944a679902",
-                "reference": "43a5aac1014d10331d76e7e6b7acfb944a679902",
+                "url": "https://api.github.com/repos/moltin/php-sdk/zipball/3576d4afa7fca3b6672e793e40b9e3672010d167",
+                "reference": "3576d4afa7fca3b6672e793e40b9e3672010d167",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "mockery/mockery": "0.7.*",
-                "phpunit/phpunit": "3.7.*"
+                "phpunit/phpunit": "^4.0"
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Moltin": "src/"
+                "psr-4": {
+                    "Moltin\\SDK\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -43,15 +43,13 @@
                 }
             ],
             "description": "The Moltin php-sdk is a simple to use interface for the API to help you get off the ground quickly and efficiently",
-            "time": "2015-05-30 22:36:44"
+            "time": "2015-10-17 17:33:03"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "moltin/php-sdk": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

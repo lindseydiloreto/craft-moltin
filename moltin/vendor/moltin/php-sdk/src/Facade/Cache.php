@@ -20,7 +20,7 @@
 
 namespace Moltin\SDK\Facade;
 
-class File
+class Cache
 {
 	protected static $sdk;
 
@@ -29,28 +29,18 @@ class File
 		self::$sdk = $sdk;
 	}
 
-	public static function Get($id)
+	public static function Listing($data = array())
 	{
-		return self::$sdk->delete('files/'.$id);
+		return self::$sdk->get('cache', $data);
 	}
 
-	public static function Upload($id, $file, $mime = null, $name = null)
+	public static function Clear($resource)
 	{
-        return self::$sdk->post('files', [
-            'file'      => new \CurlFile($file, $mime, $name),
-            'name'      => $name,
-            'assign_to' => $id
-        ]);
+		return self::$sdk->delete('cache/'.$resource);
 	}
 
-	public static function Delete($id)
+	public static function Purge()
 	{
-		return self::$sdk->delete('files/'.$id);
+		return self::$sdk->delete('cache/all');
 	}
-
-	public static function Order($data)
-	{
-		return self::$sdk->put('files/order', $data);
-	}
-
 }
