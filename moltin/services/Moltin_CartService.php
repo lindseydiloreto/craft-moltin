@@ -35,7 +35,7 @@ class Moltin_CartService extends Moltin_BaseService
 	 *
 	 * @return array|null    Results of API call
 	 */
-	public function insert($id, $qty = 1, $mods = null)
+	public function insert($id, $qty = 1, $mods = array())
 	{
 		return $this->_apiCall(['Insert', $id, $qty, $mods]);
 	}
