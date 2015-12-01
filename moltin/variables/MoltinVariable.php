@@ -28,7 +28,7 @@ class MoltinVariable
 	{
 
 		/*
-		
+
 		$matches = craft()->moltin_products->find(['slug' => 'threading-the-needle']);
 		$product = $matches[0];
 
@@ -53,19 +53,19 @@ class MoltinVariable
 			],
 			'ship_to' => 'bill_to',
 		]);
-		
+
 		Craft::dd($order);
-		
+
 
 		$checkout = craft()->moltin_checkout->payment('purchase', $order['id'], [
-			'data' => [ 
+			'data' => [
 				'number'       => '4242424242424242',
 				'expiry_month' => '02',
 				'expiry_year'  => '2017',
 				'cvv'          => '123'
 			]
 		]);
-		
+
 		Craft::dd($checkout);
 
 		return;

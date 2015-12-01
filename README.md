@@ -39,7 +39,7 @@ You'll need to convert your _cart_ to an _order_ to complete the checkout proces
 Provide the information required by your payment gateway...
 
     $checkout = craft()->moltin_checkout->payment('purchase', $order['id'], [
-        'data' => [ 
+        'data' => [
             'number'       => '4242424242424242',
             'expiry_month' => '02',
             'expiry_year'  => '2017',
@@ -69,6 +69,10 @@ Simply add your authentication info when you first install the plugin!
  - PHP 5.4
 
 ## Change Log
+
+### v0.9.0
+ - Compatible with Craft 2.5
+ - Updated PHP SDK (v1.0.2)
 
 ### v0.8.5
  - Updated PHP SDK

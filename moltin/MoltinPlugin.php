@@ -17,9 +17,24 @@ class MoltinPlugin extends BasePlugin
 		return 'Moltin';
 	}
 
+	public function getDescription()
+	{
+		return 'A wrapper for the Moltin API.';
+	}
+
+	public function getDocumentationUrl()
+	{
+		return 'https://github.com/lindseydiloreto/craft-moltin';
+	}
+
 	public function getVersion()
 	{
-		return '0.8.5';
+		return '0.9.0';
+	}
+
+	public function getSchemaVersion()
+	{
+		return null;
 	}
 
 	public function getDeveloper()
@@ -48,24 +63,35 @@ class MoltinPlugin extends BasePlugin
 		);
 	}
 
+	public function onAfterInstall()
+	{
+		craft()->request->redirect(UrlHelper::getCpUrl('settings/plugins/moltin'));
+	}
+
 	private function _clientCredentials()
 	{
-		return array(
-			'client_id'     => $this->getSettings()->clientId,
-			'client_secret' => $this->getSettings()->clientSecret
-		);
+		if ($this->getSettings()->clientId || $this->getSettings()->clientSecret) {
+			return array(
+				'client_id'     => $this->getSettings()->clientId,
+				'client_secret' => $this->getSettings()->clientSecret
+			);
+		} else {
+			return false;
+		}
 	}
 
 	private function _loadSdk()
 	{
-		try
-		{
-			require craft()->path->getPluginsPath().'/moltin/vendor/autoload.php';
-			Moltin::Authenticate('ClientCredentials', $this->_clientCredentials());
-		}
-		catch (\Exception $e)
-		{
-			craft()->moltin->handleError($e);
+		if ($this->_clientCredentials()) {
+			try
+			{
+				require craft()->path->getPluginsPath().'/moltin/vendor/autoload.php';
+				Moltin::Authenticate('ClientCredentials', $this->_clientCredentials());
+			}
+			catch (\Exception $e)
+			{
+				craft()->moltin->handleError($e);
+			}
 		}
 	}
 
