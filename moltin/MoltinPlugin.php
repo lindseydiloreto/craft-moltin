@@ -34,7 +34,7 @@ class MoltinPlugin extends BasePlugin
 
 	public function getSchemaVersion()
 	{
-		return null;
+		return '0.9.0';
 	}
 
 	public function getDeveloper()
