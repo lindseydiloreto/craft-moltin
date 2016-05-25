@@ -38,8 +38,9 @@ class Flows
     {
         // Loop fields
         foreach ($this->fields as &$field) {
+            
             if (!$this->_isValidType($field['type'])) {
-                throw new InvalidFieldType('Field type '.$field['type'].' was not found');
+                continue;
             }
 
                 // Setup args
@@ -208,6 +209,13 @@ class Flows
         unset($this->args['value']);
 
         return '<textarea ' . $this->_buildArgs($this->args) . '>' . $value . '</textarea>';
+    }
+
+    protected function typeEncrypted($a)
+    {
+        $this->args['type'] = 'password';
+
+        return '<input ' . $this->_buildArgs($this->args) . ' />';
     }
 
     protected function _buildArgs($args, $skipValue = false)

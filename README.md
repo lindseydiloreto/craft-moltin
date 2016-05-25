@@ -70,6 +70,9 @@ Simply add your authentication info when you first install the plugin!
 
 ## Change Log
 
+### v0.9.1
+ - Updated PHP SDK (v1.3)
+
 ### v0.9.0
  - Compatible with Craft 2.5
  - Updated PHP SDK (v1.0.2)
