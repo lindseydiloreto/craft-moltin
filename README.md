@@ -3,6 +3,18 @@ Moltin plugin for Craft CMS
 
 _A slick wrapper for the Moltin API_
 
+***
+
+> ### DISCONTINUED
+>
+>**This plugin will not be ported to Craft 3.**
+>
+>If you are interested in taking over as the maintainer of this repo, please [contact us](https://www.doublesecretagency.com/contact) to discuss further.
+>
+>_This repo will be deleted once Craft 4 is released._
+
+***
+
 ## What is Moltin?
 
 Moltin is a cutting-edge eCommerce solution. While relatively young, it's built upon a single, brilliant concept: **a comprehensive eCommerce API**. All of the front-end components are left for you to design at will.
